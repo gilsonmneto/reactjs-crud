@@ -5,7 +5,7 @@ import React, { Component } from "react";
 export default (props) => {
   return (
     <React.Fragment>
-      <Header />
+      <Header {...props} />
       <main className="main">Navegação</main>
     </React.Fragment>
   );
