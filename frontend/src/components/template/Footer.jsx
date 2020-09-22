@@ -1,6 +1,13 @@
 import "./Footer.css";
-import React, { Component } from "react";
+import React from "react";
 
 export default (props) => {
-  return <footer className="footer">Rodapé</footer>;
+  return (
+    <footer className="footer">
+      <span>
+        Desenvolvido com <i className="fa fa-heart text-danger"></i> para
+        Carolina
+      </span>
+    </footer>
+  );
 };
