@@ -1,14 +1,14 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Arthur Oliveira",
-      "email": "aoliveira@cod3r.com.br"
+      "name": "Gilson Souza",
+      "email": "gilsonm@neto.com.br",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Gilson Miranda",
-      "email": "gmneto@aol.com.br"
+      "name": "Carol Santos",
+      "email": "carov@hotmail.com",
+      "id": 2
     }
   ]
 }
