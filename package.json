@@ -1,10 +1,14 @@
 {
   "name": "reactjs-crud",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "REACTJS, NODEJS, JSON-SERVER, JAVASCRIPT",
+  "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "backendDep": "cd backend && npm i",
+    "backend": "cd backend && npm start",
+    "frontendDep": "cd frontend && npm i",
+    "frontend": "cd frontend && npm start",
+    "start": "npm-run-all -s backendDep frontendDep -p backend frontend"
   },
   "author": "",
   "license": "ISC",
