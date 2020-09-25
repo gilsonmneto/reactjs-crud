@@ -1,23 +1,23 @@
 import React, { Component } from "react";
-import Main from "../template/Main";
 import axios from "axios";
+import Main from "../template/Main";
 
 const headerProps = {
   icon: "users",
   title: "Usuários",
+  subtitle: "Cadastro de usuários: Incluir, Listar, Alterar e Excluir!",
 };
 
 const baseUrl = "http://localhost:3001/users";
-
 const initialState = {
   user: { name: "", email: "" },
   list: [],
 };
 
-export default class Usercrud extends Component {
+export default class UserCrud extends Component {
   state = { ...initialState };
 
-  componentDidMount() {
+  componentWillMount() {
     axios(baseUrl).then((resp) => {
       this.setState({ list: resp.data });
     });
@@ -107,7 +107,7 @@ export default class Usercrud extends Component {
 
   remove(user) {
     axios.delete(`${baseUrl}/${user.id}`).then((resp) => {
-      const list = this.updatedList(null);
+      const list = this.getUpdatedList(user, false);
       this.setState({ list });
     });
   }
@@ -136,7 +136,7 @@ export default class Usercrud extends Component {
           <td>{user.name}</td>
           <td>{user.email}</td>
           <td>
-            <button className="btn warning" onClick={(e) => this.load(user)}>
+            <button className="btn btn-warning" onClick={() => this.load(user)}>
               <i className="fa fa-pencil"></i>
             </button>
             <button
